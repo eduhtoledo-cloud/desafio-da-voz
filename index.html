@@ -236,6 +236,12 @@ section{scroll-margin-top:70px}
 .check input{width:18px;height:18px;accent-color:var(--red)}
 
 /* entregáveis */
+.depo{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);pointer-events:none;user-select:none}
+.depo-track{display:flex;width:max-content;animation:depo-loop var(--dur,40s) linear infinite}
+.depo-track img{height:460px;width:auto;margin-right:20px;border-radius:18px;box-shadow:0 18px 40px -22px rgba(17,18,22,.45);background:#fff}
+@media(max-width:600px){.depo-track img{height:380px;margin-right:14px}}
+@keyframes depo-loop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.depo{overflow-x:auto;pointer-events:auto}.depo-track{animation:none}}
 .fan{position:relative;max-width:620px;margin:0 auto 48px;aspect-ratio:16/11}
 .fan img{position:absolute;width:38%;height:auto;aspect-ratio:2/3;border-radius:8px;box-shadow:0 24px 50px -16px rgba(0,0,0,.75);background:#fff}
 .bonus{display:grid;gap:18px}
@@ -440,40 +446,6 @@ footer a{color:#D4D4D8}
   </div>
 </section>
 
-<!-- 05 ATIVIDADES NA PRÁTICA -->
-<section class="sec" aria-labelledby="ativ-t">
-  <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">Como os roteiros funcionam</span>
-      <h2 id="ativ-t">Cada texto mostra onde pausar, respirar e dar ênfase.</h2>
-      <p class="lead">Você não precisa adivinhar como ler: os marcadores guiam sua voz frase por frase.</p>
-    </div>
-    <div class="script rv">
-      <div>
-        <span class="eyebrow">Roteiro com marcadores</span>
-        <h3 style="margin:8px 0 18px">Toque nos marcadores para ver o que cada um significa</h3>
-        <div class="script-text">
-          Hoje eu quero te contar uma coisa simples.
-          <button type="button" class="mk c-pausa" data-k="pausa" aria-pressed="false">[PAUSA 2s]</button>
-          Comunicar bem não é falar rápido.
-          <button type="button" class="mk c-resp" data-k="resp" aria-pressed="false">[RESPIRE]</button>
-          É falar com intenção.
-          <button type="button" class="mk c-enf" data-k="enf" aria-pressed="false">[ÊNFASE]</button>
-          Cada palavra no seu tempo.
-          <button type="button" class="mk c-olhe" data-k="olhe" aria-pressed="false">[OLHE PARA A CÂMERA]</button>
-          E isso se treina.
-        </div>
-      </div>
-      <div class="explain" aria-live="polite">
-        <small id="ex-tag">SIGNIFICADO DO MARCADOR</small>
-        <h3 id="ex-t">Escolha um marcador</h3>
-        <p id="ex-p">Os textos de treino trazem marcações que mostram onde pausar, respirar, enfatizar e olhar para a lente.</p>
-      </div>
-    </div>
-    <div class="cta-row"><a href="#oferta" class="btn btn-red">QUERO TREINAR COM ESSES ROTEIROS <svg><use href="#i-arrow"/></svg></a></div>
-  </div>
-</section>
-
 <!-- 06 OS 10 NÍVEIS -->
 <section class="sec dark" aria-labelledby="niveis-t">
   <div class="wrap">
@@ -495,56 +467,6 @@ footer a{color:#D4D4D8}
       <li class="lv hard rv" style="--c:var(--red)"><span class="dot">10</span><div class="card"><small>NÍVEL FINAL</small><h3>HARD — Domínio da apresentação</h3><p>O desafio final que reúne tudo o que você treinou ao longo da jornada.</p></div></li>
     </ol>
     <div class="legend"><span style="--c:var(--green)">Níveis iniciais</span><span style="--c:var(--amber)">Intermediários</span><span style="--c:var(--red)">Avançados</span></div>
-  </div>
-</section>
-
-<!-- 07 DESAFIOS DE GRAVAÇÃO -->
-<section class="sec" aria-labelledby="grav-t">
-  <div class="wrap rc">
-    <div class="rv">
-      <span class="eyebrow">Desafios de gravação</span>
-      <h2 id="grav-t" style="margin:10px 0 14px">Seu progresso não fica apenas no papel.</h2>
-      <p class="lead">Ao final de cada dia de treinamento, você recebe um desafio de gravação com texto e orientações de execução. Você grava com o próprio celular, assiste e se autoavalia — sem precisar publicar.</p>
-      <ul class="list">
-        <li><svg><use href="#i-check"/></svg>Número do desafio e objetivo do dia</li>
-        <li><svg><use href="#i-check"/></svg>Tempo aproximado de gravação</li>
-        <li><svg><use href="#i-check"/></svg>Texto com pausas e marcações</li>
-        <li><svg><use href="#i-check"/></svg>Orientações de respiração</li>
-        <li><svg><use href="#i-check"/></svg>Checklist de autoavaliação</li>
-      </ul>
-    </div>
-    <article class="chal rv" aria-label="Exemplo ilustrativo de desafio de gravação">
-      <div class="chal-top">
-        <div><small>EXEMPLO ILUSTRATIVO</small><strong>Desafio 15 · O poder da pausa</strong></div>
-        <span class="timer" aria-hidden="true"><b></b>REC</span>
-      </div>
-      <div class="chal-body">
-        <div class="meta">
-          <div><small>OBJETIVO</small>Usar o silêncio como recurso e manter o ritmo até o fim da fala.</div>
-          <div><small>TEMPO</small>≈ 30 a 45 s</div>
-        </div>
-        <div class="read">
-          <small style="display:block;font:700 .66rem var(--sans);letter-spacing:.14em;color:#71717A;margin-bottom:6px">TEXTO PARA GRAVAR</small>
-          <p>“Você sabe por que algumas mensagens parecem mais fortes que outras?”</p>
-          <span class="chip c-pausa">PAUSA 2s</span>
-          <p>“Nem sempre é por causa das palavras.”</p>
-          <span class="chip c-resp">RESPIRE</span>
-          <p>“Às vezes, é pela maneira como apresentamos nossas ideias.”</p>
-          <span class="chip c-enf">ÊNFASE</span>
-          <p>“O silêncio também faz parte da comunicação.”</p>
-        </div>
-        <div class="blk"><small>RESPIRAÇÃO</small>Antes de começar, inspire pelo nariz e solte o ar devagar pela boca, duas vezes. Durante a leitura, respire apenas nos marcadores, sem pressa.</div>
-        <div class="blk"><small>AUTOAVALIAÇÃO</small>
-          <ul class="check">
-            <li><label><input type="checkbox"> Respeitei as pausas indicadas</label></li>
-            <li><label><input type="checkbox"> Mantive o olhar na lente</label></li>
-            <li><label><input type="checkbox"> Minha fala não acelerou no final</label></li>
-            <li><label><input type="checkbox"> Destaquei a frase marcada com ênfase</label></li>
-            <li><label><input type="checkbox"> Gravei até o fim, mesmo com pequenos erros</label></li>
-          </ul>
-        </div>
-      </div>
-    </article>
   </div>
 </section>
 
@@ -608,6 +530,21 @@ footer a{color:#D4D4D8}
       <article class="bcard rv"><img src="img/bonus-GC.webp" width="900" height="900" loading="lazy" decoding="async" alt="Páginas do bônus Guia de gravação com celular"><div><small>BÔNUS 5</small><h3>Guia de gravação com celular</h3><p>Enquadramento, luz, áudio, ambiente e um checklist para usar antes de cada gravação.</p></div></article>
     </div>
   </div>
+</section>
+
+<!-- 09C DEPOIMENTOS -->
+<section class="sec gray" id="depoimentos" aria-labelledby="depo-t" hidden>
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Depoimentos</span>
+      <h2 id="depo-t">O que dizem os alunos do Método V.O.Z.</h2>
+      <p class="lead">Mensagens reais enviadas por quem está treinando com o método.</p>
+    </div>
+  </div>
+  <div class="depo" aria-label="Depoimentos de alunos">
+    <div class="depo-track" id="depo-track"></div>
+  </div>
+  <div class="wrap"><p class="ill" style="margin-top:18px">Resultados variam conforme a prática individual.</p></div>
 </section>
 
 <!-- 10 OFERTA -->
@@ -762,6 +699,13 @@ const ATIVIDADES = [
   { src: "atividades/G03.webp", alt: "Legenda dos marcadores dos roteiros", w: 520, h: 780 },
 ];
 
+
+/* Depoimentos: coloque os prints REAIS (com autorização) na pasta /depoimentos
+   e liste aqui. Enquanto a lista estiver vazia, a seção fica escondida. */
+const DEPOIMENTOS = [
+  // { src: "depoimentos/depoimento-01.webp", alt: "Depoimento de aluno no WhatsApp", w: 600, h: 1300 },
+];
+
 /* ========================================================= */
 const brl = v => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -854,6 +798,17 @@ if ("IntersectionObserver" in window && !reduce) {
   const step = dir => { const w = track.querySelector(".slide").getBoundingClientRect().width; pause(); target = x + dir * w; resume(2500); };
   document.getElementById("prev").addEventListener("click", () => step(-1));
   document.getElementById("next").addEventListener("click", () => step(1));
+})();
+
+
+// Depoimentos: carrossel automático em loop infinito, sem interação
+(function () {
+  if (!DEPOIMENTOS.length) return;
+  const sec = document.getElementById("depoimentos"), track = document.getElementById("depo-track");
+  const html = DEPOIMENTOS.map(d => `<img src="${d.src}" alt="${d.alt}" width="${d.w}" height="${d.h}" loading="lazy" decoding="async" draggable="false">`).join("");
+  track.innerHTML = html + html.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
+  track.style.setProperty("--dur", Math.max(20, DEPOIMENTOS.length * 7) + "s");
+  sec.hidden = false;
 })();
 
 // Roteiro interativo
